@@ -1,12 +1,190 @@
 <!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP | Personalizado para Guillermo Adrianza
+	Versión corregida - Problemas de visualización solucionados
+-->
 <html>
 	<head>
 		<title>Guillermo Adrianza | Ingeniero en Sistemas</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Portafolio de Guillermo Adrianza, Ingeniero en Sistemas especializado en desarrollo de software" />
+		<meta name="description" content="Portafolio de Guillermo Adrianza, Ingeniero en Sistemas" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- Estilos adicionales para corregir problemas -->
+		<style>
+			/* Corregir visibilidad del menú */
+			#nav {
+				background: rgba(26, 26, 46, 0.95) !important;
+				border-bottom: 2px solid #e8491d !important;
+			}
+			#nav ul li a {
+				color: #ffffff !important;
+				font-weight: bold !important;
+			}
+			#nav ul li a:hover {
+				color: #e8491d !important;
+			}
+			#nav ul li a:active {
+				color: #e8491d !important;
+			}
+			
+			/* Corregir fondo del header */
+			#header {
+				background: #1a1a2e !important;
+				min-height: 100vh !important;
+			}
+			#header .inner {
+				background: transparent !important;
+			}
+			#header h1 a {
+				color: #ffffff !important;
+			}
+			#header p {
+				color: #e0e0e0 !important;
+			}
+			
+			/* Corregir el banner */
+			#banner {
+				background: #f4f4f9 !important;
+				padding: 60px 20px !important;
+			}
+			#banner h2 {
+				color: #1a1a2e !important;
+			}
+			#banner p {
+				color: #333 !important;
+			}
+			
+			/* Corregir el carrusel */
+			.carousel {
+				background: #ffffff !important;
+			}
+			.carousel article {
+				background: #f9f9fc !important;
+				border-radius: 10px !important;
+				padding: 20px !important;
+				margin: 10px !important;
+				box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+			}
+			.carousel article h3 a {
+				color: #1a1a2e !important;
+			}
+			.carousel article p {
+				color: #333 !important;
+			}
+			.carousel article .button {
+				background: #1a1a2e !important;
+				color: #ffffff !important;
+				border: none !important;
+				padding: 8px 16px !important;
+				border-radius: 5px !important;
+				text-decoration: none !important;
+				display: inline-block !important;
+				font-size: 0.9rem !important;
+			}
+			.carousel article .button:hover {
+				background: #16213e !important;
+				color: #ffffff !important;
+			}
+			
+			/* Placeholders para imágenes que no existen */
+			.image-placeholder {
+				background: linear-gradient(135deg, #1a1a2e, #16213e);
+				height: 200px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #ffffff;
+				font-size: 1.2rem;
+				border-radius: 10px;
+				width: 100%;
+			}
+			.image-placeholder i {
+				font-size: 3rem;
+				margin-right: 10px;
+			}
+			
+			/* Corregir sección Sobre Mí */
+			.wrapper.style2 {
+				background: #1a1a2e !important;
+				color: #ffffff !important;
+			}
+			.wrapper.style2 h2 a {
+				color: #ffffff !important;
+			}
+			.wrapper.style2 p {
+				color: #e0e0e0 !important;
+			}
+			.wrapper.style2 .button {
+				background: #e8491d !important;
+				color: #ffffff !important;
+				border: none !important;
+			}
+			.wrapper.style2 .button:hover {
+				background: #c73d17 !important;
+			}
+			
+			/* Corregir sección Habilidades */
+			.wrapper.style1 {
+				background: #ffffff !important;
+			}
+			.wrapper.style1 h2 {
+				color: #1a1a2e !important;
+			}
+			.wrapper.style1 p {
+				color: #333 !important;
+			}
+			.wrapper.style1 article p strong {
+				color: #1a1a2e !important;
+			}
+			
+			/* Corregir Footer */
+			#footer {
+				background: #1a1a2e !important;
+				color: #ffffff !important;
+			}
+			#footer .icon.circled {
+				background: #e8491d !important;
+				color: #ffffff !important;
+			}
+			#footer .tweet {
+				color: #e0e0e0 !important;
+			}
+			#footer .tweet a {
+				color: #e8491d !important;
+			}
+			#footer .contact h3 {
+				color: #ffffff !important;
+			}
+			#footer .contact p {
+				color: #e0e0e0 !important;
+			}
+			#footer .icons a {
+				color: #e0e0e0 !important;
+			}
+			#footer .icons a:hover {
+				color: #e8491d !important;
+			}
+			#footer .copyright {
+				color: #888 !important;
+			}
+			#footer .copyright a {
+				color: #e8491d !important;
+			}
+			
+			/* Ajustes responsive */
+			@media (max-width: 736px) {
+				#header {
+					min-height: 80vh !important;
+				}
+				.carousel article {
+					margin: 5px !important;
+					padding: 15px !important;
+				}
+			}
+		</style>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -62,9 +240,11 @@
 					<div class="reel">
 
 						<article>
-							<a href="https://github.com/Davidesk19120304/Sistema-de-Analisis-y-Monitorizacion-del-trafico-de-red" target="_blank" rel="noopener noreferrer" class="image featured">
-								<img src="images/pic01.jpg" alt="Sistema de Análisis de Red" />
-							</a>
+							<div class="image featured">
+								<div class="image-placeholder" style="height:180px; background: linear-gradient(135deg, #1a1a2e, #2d2d5e); display:flex; align-items:center; justify-content:center; color:#fff; border-radius:10px; font-size:1.2rem;">
+									📡 Sistema de Red
+								</div>
+							</div>
 							<header>
 								<h3><a href="https://github.com/Davidesk19120304/Sistema-de-Analisis-y-Monitorizacion-del-trafico-de-red" target="_blank" rel="noopener noreferrer">Sistema de Análisis de Red</a></h3>
 							</header>
@@ -74,9 +254,11 @@
 						</article>
 
 						<article>
-							<a href="https://github.com/Davidesk19120304/Proyecto-feria" target="_blank" rel="noopener noreferrer" class="image featured">
-								<img src="images/pic02.jpg" alt="Proyecto Feria" />
-							</a>
+							<div class="image featured">
+								<div class="image-placeholder" style="height:180px; background: linear-gradient(135deg, #e8491d, #c73d17); display:flex; align-items:center; justify-content:center; color:#fff; border-radius:10px; font-size:1.2rem;">
+									🎓 Proyecto Feria
+								</div>
+							</div>
 							<header>
 								<h3><a href="https://github.com/Davidesk19120304/Proyecto-feria" target="_blank" rel="noopener noreferrer">Proyecto Feria</a></h3>
 							</header>
@@ -86,9 +268,11 @@
 						</article>
 
 						<article>
-							<a href="https://github.com/Davidesk19120304/Inscripcion-kinder" target="_blank" rel="noopener noreferrer" class="image featured">
-								<img src="images/pic03.jpg" alt="Inscripción Kinder" />
-							</a>
+							<div class="image featured">
+								<div class="image-placeholder" style="height:180px; background: linear-gradient(135deg, #16213e, #1a1a2e); display:flex; align-items:center; justify-content:center; color:#fff; border-radius:10px; font-size:1.2rem;">
+									🏫 Inscripción Kinder
+								</div>
+							</div>
 							<header>
 								<h3><a href="https://github.com/Davidesk19120304/Inscripcion-kinder" target="_blank" rel="noopener noreferrer">Inscripción Kinder</a></h3>
 							</header>
@@ -98,9 +282,11 @@
 						</article>
 
 						<article>
-							<a href="#" class="image featured">
-								<img src="images/pic04.jpg" alt="Próximo Proyecto" />
-							</a>
+							<div class="image featured">
+								<div class="image-placeholder" style="height:180px; background: linear-gradient(135deg, #2d2d5e, #1a1a2e); display:flex; align-items:center; justify-content:center; color:#fff; border-radius:10px; font-size:1.2rem;">
+									🚀 Próximo Proyecto
+								</div>
+							</div>
 							<header>
 								<h3><a href="#">Próximo Proyecto</a></h3>
 							</header>
@@ -115,9 +301,11 @@
 				<div class="wrapper style2" id="sobre-mi">
 
 					<article id="main" class="container special">
-						<a href="#" class="image featured">
-							<img src="images/pic06.jpg" alt="Guillermo Adrianza" />
-						</a>
+						<div class="image featured">
+							<div class="image-placeholder" style="height:250px; background: linear-gradient(135deg, #2d2d5e, #1a1a2e); display:flex; align-items:center; justify-content:center; color:#fff; border-radius:10px; font-size:2rem;">
+								👨‍💻 Guillermo Adrianza
+							</div>
+						</div>
 						<header>
 							<h2><a href="#">Sobre Mí</a></h2>
 							<p>
