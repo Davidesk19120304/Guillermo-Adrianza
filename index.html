@@ -1,190 +1,271 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guillermo Adrianza - Portafolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 20px;
-        }
-        header {
-            background: #1a1a2e;
-            color: #fff;
-            padding: 40px 0;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 2.8rem;
-        }
-        header p {
-            font-size: 1.2rem;
-            color: #e0e0e0;
-        }
-        .section {
-            background: #fff;
-            margin: 30px 0;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .section h2 {
-            color: #1a1a2e;
-            border-bottom: 3px solid #1a1a2e;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .proyecto {
-            background: #f9f9fc;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 8px;
-            border-left: 5px solid #1a1a2e;
-        }
-        .proyecto h3 {
-            color: #1a1a2e;
-        }
-        .proyecto .tecnologias {
-            display: inline-block;
-            background: #1a1a2e;
-            color: #fff;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin: 5px 5px 0 0;
-        }
-        .btn {
-            display: inline-block;
-            background: #1a1a2e;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        .btn:hover {
-            background: #16213e;
-        }
-        .contacto a {
-            color: #1a1a2e;
-            text-decoration: none;
-            font-weight: bold;
-            margin-right: 15px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #888;
-        }
-        .habilidades span {
-            display: inline-block;
-            background: #e0e0e0;
-            padding: 5px 15px;
-            border-radius: 20px;
-            margin: 5px;
-        }
-    </style>
-</head>
-<body>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Guillermo Adrianza | Ingeniero en Sistemas</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Portafolio de Guillermo Adrianza, Ingeniero en Sistemas especializado en desarrollo de software" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
 
-<header>
-    <div class="container">
-        <h1>👨‍💻 Guillermo Adrianza</h1>
-        <p>Ingeniero en Sistemas | Desarrollador de Software</p>
-    </div>
-</header>
+			<!-- Header -->
+				<div id="header">
 
-<div class="container">
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="index.html" id="logo">Guillermo Adrianza</a></h1>
+								<hr />
+								<p>Ingeniero en Sistemas | Desarrollador de Software</p>
+							</header>
+							<footer>
+								<a href="#banner" class="button circled scrolly">↓</a>
+							</footer>
+						</div>
 
-    <!-- Sobre mí -->
-    <div class="section">
-        <h2>Sobre mí</h2>
-        <p>
-            Ingeniero en Sistemas recién egresado del Instituto Universitario Politécnico "Santiago Mariño", 
-            con sólidos conocimientos en desarrollo de software, bases de datos y lógica de programación. 
-            Apasionado por crear soluciones tecnológicas eficientes y escalables. 
-            Manejo tecnologías como Python, C#, .NET y SQL.
-        </p>
-    </div>
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Inicio</a></li>
+								<li>
+									<a href="#">Proyectos</a>
+									<ul>
+										<li><a href="#proyectos">Sistema de Análisis de Red</a></li>
+										<li><a href="#proyectos">Proyecto Feria</a></li>
+										<li><a href="#proyectos">Inscripción Kinder</a></li>
+									</ul>
+								</li>
+								<li><a href="#sobre-mi">Sobre Mí</a></li>
+								<li><a href="#habilidades">Habilidades</a></li>
+								<li><a href="#contacto">Contacto</a></li>
+							</ul>
+						</nav>
 
-    <!-- Habilidades -->
-    <div class="section">
-        <h2>Habilidades Técnicas</h2>
-        <div class="habilidades">
-            <span>Python</span>
-            <span>C#</span>
-            <span>.NET</span>
-            <span>SQL</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>Visual Studio</span>
-            <span>XAMPP</span>
-        </div>
-    </div>
+				</div>
 
-    <!-- Proyectos -->
-    <div class="section">
-        <h2>Proyectos</h2>
+			<!-- Banner -->
+				<section id="banner">
+					<header>
+						<h2>Bienvenido a mi <strong>Portafolio</strong>.</h2>
+						<p>
+							Soy Ingeniero en Sistemas recién egresado, apasionado por el desarrollo de software
+							y la creación de soluciones tecnológicas eficientes.
+						</p>
+					</header>
+				</section>
 
-        <div class="proyecto">
-            <h3>📌 Sistema de de Analisis y Monitorizacion del Trafico de Red con capacidades para la deteccion de anomalias</h3>
-            <p>Aplicación de escritorio en C# y SQL (XAMPP) para el monitorio en tiempo real y deteccion de anomalias existentes en el trafico de red.</p>
-            <span class="tecnologias">C#</span>
-            <span class="tecnologias">XAMPP</span>
-            <span class="tecnologias">Windows Forms</span>
-            <br>
-            <a href="https://github.com/Davidesk19120304/Sistema-de-Analisis-y-Monitorizacion-del-trafico-de-red" target="_blank" rel="noopener noreferrer" class="btn">Ver en GitHub</a>
-        </div>
+			<!-- Carousel (Proyectos Destacados) -->
+				<section class="carousel" id="proyectos">
+					<div class="reel">
 
-        <div class="proyecto">
-            <h3>📌 Proyecto Feria</h3>
-            <p>Aplicacion de escritorio creada para ayudar a niños/a con discapacidad auditiva.</p>
-            <span class="tecnologias">C#</span>
-            <span class="tecnologias">PYTHON</span>
-            <span class="tecnologias">GNULA</span>
-            <br>
-            <a href="https://github.com/Davidesk19120304/Proyecto-feria" target="_blank" rel="noopener noreferrer" class="btn">Ver en GitHub</a>
-        </div>
+						<article>
+							<a href="https://github.com/Davidesk19120304/Sistema-de-Analisis-y-Monitorizacion-del-trafico-de-red" target="_blank" rel="noopener noreferrer" class="image featured">
+								<img src="images/pic01.jpg" alt="Sistema de Análisis de Red" />
+							</a>
+							<header>
+								<h3><a href="https://github.com/Davidesk19120304/Sistema-de-Analisis-y-Monitorizacion-del-trafico-de-red" target="_blank" rel="noopener noreferrer">Sistema de Análisis de Red</a></h3>
+							</header>
+							<p>Monitorización en tiempo real y detección de anomalías en el tráfico de red.</p>
+							<p><strong>Tecnologías:</strong> C#, XAMPP, Windows Forms</p>
+							<a href="https://github.com/Davidesk19120304/Sistema-de-Analisis-y-Monitorizacion-del-trafico-de-red" target="_blank" rel="noopener noreferrer" class="button small">Ver en GitHub</a>
+						</article>
 
-        <div class="proyecto">
-            <h3>📌 Inscripcion kinder</h3>
-            <p>Aplicacion de escritorio sobre un proceso de inscripcion de un kinder.</p>
-            <span class="tecnologias">C#</span>
-            <span class="tecnologias">XAMPP</span>
-            <span class="tecnologias">GNULA</span>
-            <br>
-            <a href="https://github.com/Davidesk19120304/Inscripcion-kinder" target="_blank" rel="noopener noreferrer" class="btn">Ver en GitHub</a>
-        </div>
+						<article>
+							<a href="https://github.com/Davidesk19120304/Proyecto-feria" target="_blank" rel="noopener noreferrer" class="image featured">
+								<img src="images/pic02.jpg" alt="Proyecto Feria" />
+							</a>
+							<header>
+								<h3><a href="https://github.com/Davidesk19120304/Proyecto-feria" target="_blank" rel="noopener noreferrer">Proyecto Feria</a></h3>
+							</header>
+							<p>Aplicación educativa para niños con discapacidad auditiva.</p>
+							<p><strong>Tecnologías:</strong> C#, Python, GNU/Linux</p>
+							<a href="https://github.com/Davidesk19120304/Proyecto-feria" target="_blank" rel="noopener noreferrer" class="button small">Ver en GitHub</a>
+						</article>
 
-    <!-- Contacto -->
-    <div class="section contacto">
-        <h2>Contacto</h2>
-        <p>📧 <a href="mailto:guilleadrl6@gmail.com">guilleadrl6@gmail.com</a></p>
-        <p>📱 <a href="tel:04120643650">0412-0643650</a></p>
-        <p>
-            <a href="https://www.linkedin.com/in/guillermo-adrianza-308222426" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://github.com/Davidesk19120304" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </p>
-    </div>
+						<article>
+							<a href="https://github.com/Davidesk19120304/Inscripcion-kinder" target="_blank" rel="noopener noreferrer" class="image featured">
+								<img src="images/pic03.jpg" alt="Inscripción Kinder" />
+							</a>
+							<header>
+								<h3><a href="https://github.com/Davidesk19120304/Inscripcion-kinder" target="_blank" rel="noopener noreferrer">Inscripción Kinder</a></h3>
+							</header>
+							<p>Sistema de escritorio para gestión de inscripciones en un kinder.</p>
+							<p><strong>Tecnologías:</strong> C#, XAMPP, GNU/Linux</p>
+							<a href="https://github.com/Davidesk19120304/Inscripcion-kinder" target="_blank" rel="noopener noreferrer" class="button small">Ver en GitHub</a>
+						</article>
 
-</div>
+						<article>
+							<a href="#" class="image featured">
+								<img src="images/pic04.jpg" alt="Próximo Proyecto" />
+							</a>
+							<header>
+								<h3><a href="#">Próximo Proyecto</a></h3>
+							</header>
+							<p>Actualmente trabajando en nuevos proyectos. ¡Pronto más!</p>
+							<p><strong>Tecnologías:</strong> Próximamente</p>
+						</article>
 
-<footer>
-    <p>&copy; 2026 Guillermo Adrianza - Ingeniero en Sistemas</p>
-</footer>
+					</div>
+				</section>
 
-</body>
+			<!-- Main (Sobre Mí) -->
+				<div class="wrapper style2" id="sobre-mi">
+
+					<article id="main" class="container special">
+						<a href="#" class="image featured">
+							<img src="images/pic06.jpg" alt="Guillermo Adrianza" />
+						</a>
+						<header>
+							<h2><a href="#">Sobre Mí</a></h2>
+							<p>
+								Ingeniero en Sistemas egresado del Instituto Universitario Politécnico "Santiago Mariño"
+							</p>
+						</header>
+						<p>
+							Soy un profesional apasionado por la tecnología y el desarrollo de software. Durante mi formación
+							académica, destaqué por obtener una beca académica y mantener un promedio sobresaliente de 15.49/20.
+							Poseo conocimientos en lenguajes como <strong>Python, C#, .NET</strong> y manejo de bases de datos
+							<strong>SQL</strong>. He desarrollado proyectos aplicando metodologías ágiles y tengo un gran interés
+							en la inteligencia artificial y el desarrollo de soluciones innovadoras.
+						</p>
+						<p>
+							Actualmente me encuentro en búsqueda activa de mi primera oportunidad profesional, donde pueda
+							aportar mis conocimientos técnicos, seguir aprendiendo y crecer dentro del área de desarrollo de software.
+						</p>
+						<footer>
+							<a href="#contacto" class="button">Contáctame</a>
+						</footer>
+					</article>
+
+				</div>
+
+			<!-- Features (Habilidades) -->
+				<div class="wrapper style1" id="habilidades">
+
+					<section id="features" class="container special">
+						<header>
+							<h2>Habilidades Técnicas</h2>
+							<p>Estas son las tecnologías y herramientas que manejo</p>
+						</header>
+						<div class="row">
+							<article class="col-4 col-12-mobile special">
+								<header>
+									<h3>Lenguajes de Programación</h3>
+								</header>
+								<p>
+									<strong>Python</strong> (Intermedio)<br />
+									<strong>C#</strong> (Intermedio)<br />
+									<strong>HTML</strong> (Intermedio)<br />
+									<strong>.NET</strong> (Intermedio)
+								</p>
+							</article>
+							<article class="col-4 col-12-mobile special">
+								<header>
+									<h3>Bases de Datos y Herramientas</h3>
+								</header>
+								<p>
+									<strong>SQL</strong> (Intermedio)<br />
+									<strong>XAMPP</strong> (Intermedio)<br />
+									<strong>Visual Studio</strong> (Avanzado)<br />
+									<strong>GNU/Linux</strong> (Intermedio)
+								</p>
+							</article>
+							<article class="col-4 col-12-mobile special">
+								<header>
+									<h3>Otros Conocimientos</h3>
+								</header>
+								<p>
+									<strong>Inteligencia Artificial</strong> (Curso)<br />
+									<strong>Desarrollo con IA</strong> (Curso)<br />
+									<strong>Metodologías Ágiles</strong><br />
+									<strong>Microsoft Office</strong> (Intermedio)
+								</p>
+							</article>
+						</div>
+					</section>
+
+				</div>
+
+			<!-- Footer -->
+				<div id="footer" id="contacto">
+					<div class="container">
+						<div class="row">
+
+							<!-- Contacto -->
+								<section class="col-12">
+									<header>
+										<h2 class="icon solid fa-envelope circled"><span class="label">Contacto</span></h2>
+									</header>
+									<ul class="divided">
+										<li>
+											<article class="tweet">
+												<strong>📧 Email:</strong> <a href="mailto:guilleadrl6@gmail.com">guilleadrl6@gmail.com</a>
+											</article>
+										</li>
+										<li>
+											<article class="tweet">
+												<strong>📱 Teléfono:</strong> <a href="tel:04120643650">0412-0643650</a>
+											</article>
+										</li>
+										<li>
+											<article class="tweet">
+												<strong>📍 Ubicación:</strong> Cabimas, Zulia, Venezuela
+											</article>
+										</li>
+										<li>
+											<article class="tweet">
+												<strong>💼 Disponibilidad:</strong> Inmediata
+											</article>
+										</li>
+									</ul>
+								</section>
+
+						</div>
+						<hr />
+						<div class="row">
+							<div class="col-12">
+
+								<!-- Redes Sociales -->
+									<section class="contact">
+										<header>
+											<h3>Conéctate conmigo</h3>
+										</header>
+										<p>Sígueme en mis redes profesionales y revisa mi código en GitHub.</p>
+										<ul class="icons">
+											<li><a href="https://www.linkedin.com/in/guillermo-adrianza-308222426" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+											<li><a href="https://github.com/Davidesk19120304" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+											<li><a href="mailto:guilleadrl6@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+										</ul>
+									</section>
+
+								<!-- Copyright -->
+									<div class="copyright">
+										<ul class="menu">
+											<li>&copy; 2026 Guillermo Adrianza. Todos los derechos reservados.</li>
+											<li>Diseño: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+										</ul>
+									</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
