@@ -557,6 +557,16 @@
             transition: var(--transition);
         }
         .contact-item a:hover { color: var(--accent-light); }
+        .contact-item .copy-btn {
+            background: none;
+            border: none;
+            color: var(--accent-light);
+            cursor: pointer;
+            font-size: 1rem;
+            margin-left: 0.5rem;
+            transition: var(--transition);
+        }
+        .contact-item .copy-btn:hover { color: var(--white); }
         
         .contact-item.span-2 {
             grid-column: span 2;
@@ -590,6 +600,7 @@
             font-size: 1.3rem;
             transition: var(--transition);
             border: 1px solid rgba(59, 130, 246, 0.1);
+            cursor: pointer;
         }
         #footer .social a:hover {
             background: var(--accent);
@@ -948,7 +959,12 @@
                 <div class="contact-item">
                     <div class="icon"><i class="fas fa-envelope"></i></div>
                     <h4>Email</h4>
-                    <p><a href="mailto:guilleadrl6@gmail.com" target="_blank" rel="noopener noreferrer">guilleadrl6@gmail.com</a></p>
+                    <p style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                        <span id="email-text">guilleadrl6@gmail.com</span>
+                        <button class="copy-btn" onclick="copiarEmail()" title="Copiar correo">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </p>
                 </div>
                 <div class="contact-item">
                     <div class="icon"><i class="fas fa-phone"></i></div>
@@ -984,7 +1000,7 @@
                 <a href="https://github.com/Davidesk19120304" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="mailto:guilleadrl6@gmail.com" aria-label="Email">
+                <a onclick="copiarEmail()" aria-label="Copiar email" style="cursor: pointer;">
                     <i class="fas fa-envelope"></i>
                 </a>
                 <a href="https://wa.me/584120643650" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
@@ -1000,7 +1016,33 @@
 
     <!-- ===== SCRIPTS ===== -->
     <script>
-        // Menú hamburguesa para móviles
+        // Función para copiar el correo
+        function copiarEmail() {
+            const email = "guilleadrl6@gmail.com";
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(email)
+                    .then(() => {
+                        alert("📋 Correo copiado al portapapeles");
+                    })
+                    .catch(() => {
+                        fallbackCopiar(email);
+                    });
+            } else {
+                fallbackCopiar(email);
+            }
+        }
+
+        function fallbackCopiar(texto) {
+            const input = document.createElement('input');
+            input.value = texto;
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+            document.body.removeChild(input);
+            alert("📋 Correo copiado al portapapeles");
+        }
+
+        // Menú hamburguesa
         const toggle = document.getElementById('navToggle');
         const menu = document.getElementById('navMenu');
 
@@ -1008,14 +1050,13 @@
             menu.classList.toggle('open');
         });
 
-        // Cerrar menú al hacer clic en un enlace
         document.querySelectorAll('#navMenu a').forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.remove('open');
             });
         });
 
-        // Resaltar enlace activo al hacer scroll
+        // Resaltar enlace activo al scroll
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('#navMenu a');
 
