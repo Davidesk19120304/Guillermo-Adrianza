@@ -1,459 +1,1123 @@
 <!DOCTYPE HTML>
-<!--
-	Helios by HTML5 UP | Personalizado para Guillermo Adrianza
-	Versión corregida - Problemas de visualización solucionados
--->
-<html>
-	<head>
-		<title>Guillermo Adrianza | Ingeniero en Sistemas</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Portafolio de Guillermo Adrianza, Ingeniero en Sistemas" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		
-		<!-- Estilos adicionales para corregir problemas -->
-		<style>
-			/* Corregir visibilidad del menú */
-			#nav {
-				background: rgba(26, 26, 46, 0.95) !important;
-				border-bottom: 2px solid #e8491d !important;
-			}
-			#nav ul li a {
-				color: #ffffff !important;
-				font-weight: bold !important;
-			}
-			#nav ul li a:hover {
-				color: #e8491d !important;
-			}
-			#nav ul li a:active {
-				color: #e8491d !important;
-			}
-			
-			/* Corregir fondo del header */
-			#header {
-				background: #1a1a2e !important;
-				min-height: 100vh !important;
-			}
-			#header .inner {
-				background: transparent !important;
-			}
-			#header h1 a {
-				color: #ffffff !important;
-			}
-			#header p {
-				color: #e0e0e0 !important;
-			}
-			
-			/* Corregir el banner */
-			#banner {
-				background: #f4f4f9 !important;
-				padding: 60px 20px !important;
-			}
-			#banner h2 {
-				color: #1a1a2e !important;
-			}
-			#banner p {
-				color: #333 !important;
-			}
-			
-			/* Corregir el carrusel */
-			.carousel {
-				background: #ffffff !important;
-			}
-			.carousel article {
-				background: #f9f9fc !important;
-				border-radius: 10px !important;
-				padding: 20px !important;
-				margin: 10px !important;
-				box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
-			}
-			.carousel article h3 a {
-				color: #1a1a2e !important;
-			}
-			.carousel article p {
-				color: #333 !important;
-			}
-			.carousel article .button {
-				background: #1a1a2e !important;
-				color: #ffffff !important;
-				border: none !important;
-				padding: 8px 16px !important;
-				border-radius: 5px !important;
-				text-decoration: none !important;
-				display: inline-block !important;
-				font-size: 0.9rem !important;
-			}
-			.carousel article .button:hover {
-				background: #16213e !important;
-				color: #ffffff !important;
-			}
-			
-			/* Placeholders para imágenes que no existen */
-			.image-placeholder {
-				background: linear-gradient(135deg, #1a1a2e, #16213e);
-				height: 200px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				color: #ffffff;
-				font-size: 1.2rem;
-				border-radius: 10px;
-				width: 100%;
-			}
-			.image-placeholder i {
-				font-size: 3rem;
-				margin-right: 10px;
-			}
-			
-			/* Corregir sección Sobre Mí */
-			.wrapper.style2 {
-				background: #1a1a2e !important;
-				color: #ffffff !important;
-			}
-			.wrapper.style2 h2 a {
-				color: #ffffff !important;
-			}
-			.wrapper.style2 p {
-				color: #e0e0e0 !important;
-			}
-			.wrapper.style2 .button {
-				background: #e8491d !important;
-				color: #ffffff !important;
-				border: none !important;
-			}
-			.wrapper.style2 .button:hover {
-				background: #c73d17 !important;
-			}
-			
-			/* Corregir sección Habilidades */
-			.wrapper.style1 {
-				background: #ffffff !important;
-			}
-			.wrapper.style1 h2 {
-				color: #1a1a2e !important;
-			}
-			.wrapper.style1 p {
-				color: #333 !important;
-			}
-			.wrapper.style1 article p strong {
-				color: #1a1a2e !important;
-			}
-			
-			/* Corregir Footer */
-			#footer {
-				background: #1a1a2e !important;
-				color: #ffffff !important;
-			}
-			#footer .icon.circled {
-				background: #e8491d !important;
-				color: #ffffff !important;
-			}
-			#footer .tweet {
-				color: #e0e0e0 !important;
-			}
-			#footer .tweet a {
-				color: #e8491d !important;
-			}
-			#footer .contact h3 {
-				color: #ffffff !important;
-			}
-			#footer .contact p {
-				color: #e0e0e0 !important;
-			}
-			#footer .icons a {
-				color: #e0e0e0 !important;
-			}
-			#footer .icons a:hover {
-				color: #e8491d !important;
-			}
-			#footer .copyright {
-				color: #888 !important;
-			}
-			#footer .copyright a {
-				color: #e8491d !important;
-			}
-			
-			/* Ajustes responsive */
-			@media (max-width: 736px) {
-				#header {
-					min-height: 80vh !important;
-				}
-				.carousel article {
-					margin: 5px !important;
-					padding: 15px !important;
-				}
-			}
-		</style>
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
+<html lang="es">
+<head>
+    <title>Guillermo Adrianza | Ingeniero en Sistemas</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Portafolio profesional de Guillermo Adrianza, Ingeniero en Sistemas especializado en desarrollo de software" />
+    <meta name="keywords" content="Ingeniero en Sistemas, Desarrollador, Python, C#, .NET, Portafolio" />
+    <meta name="author" content="Guillermo Adrianza" />
+    
+    <!-- Open Graph para redes sociales -->
+    <meta property="og:title" content="Guillermo Adrianza | Ingeniero en Sistemas" />
+    <meta property="og:description" content="Portafolio profesional de Guillermo Adrianza" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tu-portafolio.vercel.app" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <style>
+        /* ===== RESET Y VARIABLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #e8491d;
+            --accent-hover: #c73d17;
+            --light: #f4f4f9;
+            --text-dark: #1a1a2e;
+            --text-light: #e0e0e0;
+            --white: #ffffff;
+            --shadow: 0 10px 40px rgba(0,0,0,0.1);
+            --radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        
+        /* ===== NAVEGACIÓN ===== */
+        #nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            border-bottom: 2px solid var(--accent);
+            transition: var(--transition);
+        }
+        
+        #nav .logo {
+            color: var(--white);
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        #nav .logo span {
+            color: var(--accent);
+        }
+        
+        #nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        #nav ul li a {
+            color: var(--white);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        #nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+        
+        #nav ul li a:hover::after,
+        #nav ul li a.active::after {
+            width: 100%;
+        }
+        
+        #nav ul li a:hover {
+            color: var(--accent);
+        }
+        
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+        
+        .nav-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: var(--white);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+        
+        /* ===== HEADER / HERO ===== */
+        #header {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 0 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(232, 73, 29, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        #header::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(232, 73, 29, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(232, 73, 29, 0.2);
+            color: var(--accent);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(232, 73, 29, 0.3);
+        }
+        
+        #header h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+        
+        #header h1 span {
+            color: var(--accent);
+        }
+        
+        #header .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+        
+        #header .subtitle strong {
+            color: var(--white);
+            font-weight: 600;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 2.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(232, 73, 29, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--white);
+            transform: translateY(-3px);
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--text-light);
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            opacity: 0.6;
+            cursor: pointer;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-20px); }
+            60% { transform: translateX(-50%) translateY(-10px); }
+        }
+        
+        /* ===== SECCIONES GENERALES ===== */
+        .section {
+            padding: 6rem 2rem;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header h2 span {
+            color: var(--accent);
+        }
+        
+        .section-header p {
+            color: #666;
+            font-size: 1.15rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        /* ===== BANNER / INTRO ===== */
+        #banner {
+            background: var(--white);
+            text-align: center;
+            padding: 5rem 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        #banner h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        #banner h2 strong {
+            color: var(--accent);
+        }
+        
+        #banner p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 700px;
+            margin: 1rem auto 0;
+        }
+        
+        /* ===== PROYECTOS ===== */
+        #proyectos {
+            background: var(--light);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        
+        .project-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--white);
+            position: relative;
+        }
+        
+        .project-image .icon {
+            font-size: 4rem;
+            opacity: 0.3;
+        }
+        
+        .project-image .label {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            background: rgba(0,0,0,0.7);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .project-card .content {
+            padding: 1.8rem;
+        }
+        
+        .project-card .content h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-card .content h3 a {
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+        
+        .project-card .content h3 a:hover {
+            color: var(--accent);
+        }
+        
+        .project-card .content p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-card .content .tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .project-card .content .tech span {
+            background: var(--light);
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .project-card .content .btn-small {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .project-card .content .btn-small:hover {
+            background: var(--accent);
+            transform: translateX(5px);
+        }
+        
+        /* ===== SOBRE MÍ ===== */
+        #sobre-mi {
+            background: var(--primary);
+            color: var(--white);
+        }
+        
+        #sobre-mi .section-header h2 {
+            color: var(--white);
+        }
+        
+        #sobre-mi .section-header p {
+            color: var(--text-light);
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            border-radius: var(--radius);
+            padding: 3rem;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .about-image .avatar {
+            font-size: 6rem;
+            margin-bottom: 1rem;
+        }
+        
+        .about-image h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .about-image p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        .about-text p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        
+        .about-text .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            background: rgba(255,255,255,0.05);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .stat-item .number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+        
+        .stat-item .label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        
+        /* ===== HABILIDADES ===== */
+        #habilidades {
+            background: var(--white);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+        
+        .skill-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+        
+        .skill-card .icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        .skill-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .skill-card ul {
+            list-style: none;
+            margin-top: 0.5rem;
+        }
+        
+        .skill-card ul li {
+            padding: 0.3rem 0;
+            color: #555;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .skill-card ul li::before {
+            content: '▸';
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        .skill-level {
+            height: 6px;
+            background: #ddd;
+            border-radius: 3px;
+            margin-top: 0.5rem;
+            overflow: hidden;
+        }
+        
+        .skill-level .fill {
+            height: 100%;
+            background: var(--accent);
+            border-radius: 3px;
+        }
+        
+        /* ===== CONTACTO ===== */
+        #contacto {
+            background: var(--primary);
+            color: var(--white);
+        }
+        
+        #contacto .section-header h2 {
+            color: var(--white);
+        }
+        
+        #contacto .section-header p {
+            color: var(--text-light);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .contact-item {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: var(--radius);
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: var(--transition);
+        }
+        
+        .contact-item:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-4px);
+        }
+        
+        .contact-item .icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item h4 {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+        
+        .contact-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        .contact-item a {
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+        
+        .contact-item a:hover {
+            color: var(--accent);
+        }
+        
+        /* ===== FOOTER ===== */
+        #footer {
+            background: var(--secondary);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        #footer .social {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        #footer .social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            color: var(--white);
+            font-size: 1.3rem;
+            transition: var(--transition);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        #footer .social a:hover {
+            background: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(232, 73, 29, 0.3);
+        }
+        
+        #footer .copyright {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        #footer .copyright a {
+            color: var(--accent);
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 968px) {
+            #header h1 {
+                font-size: 3.2rem;
+            }
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            #nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: var(--primary);
+                padding: 2rem;
+                gap: 1rem;
+                border-bottom: 2px solid var(--accent);
+            }
+            
+            #nav ul.open {
+                display: flex;
+            }
+            
+            .nav-toggle {
+                display: flex;
+            }
+            
+            #header h1 {
+                font-size: 2.5rem;
+            }
+            
+            #header .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section {
+                padding: 4rem 1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #header h1 {
+                font-size: 2rem;
+            }
+            
+            #header {
+                min-height: 90vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== NAVEGACIÓN ===== -->
+    <nav id="nav">
+        <a href="#" class="logo">G<span>A</span></a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="navMenu">
+            <li><a href="#header" class="active">Inicio</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#sobre-mi">Sobre Mí</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
 
-			<!-- Header -->
-				<div id="header">
+    <!-- ===== HEADER / HERO ===== -->
+    <header id="header">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-code"></i> Disponible para oportunidades
+            </div>
+            <h1>Guillermo <span>Adrianza</span></h1>
+            <p class="subtitle">
+                <strong>Ingeniero en Sistemas</strong> · Desarrollador de Software
+            </p>
+            <div class="hero-buttons">
+                <a href="#proyectos" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i> Ver Proyectos
+                </a>
+                <a href="#contacto" class="btn btn-secondary">
+                    <i class="fas fa-paper-plane"></i> Contáctame
+                </a>
+            </div>
+        </div>
+        <a href="#banner" class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </header>
 
-					<!-- Inner -->
-						<div class="inner">
-							<header>
-								<h1><a href="index.html" id="logo">Guillermo Adrianza</a></h1>
-								<hr />
-								<p>Ingeniero en Sistemas | Desarrollador de Software</p>
-							</header>
-							<footer>
-								<a href="#banner" class="button circled scrolly">↓</a>
-							</footer>
-						</div>
+    <!-- ===== BANNER ===== -->
+    <section id="banner">
+        <h2>Bienvenido a mi <strong>Portafolio</strong></h2>
+        <p>
+            Soy Ingeniero en Sistemas recién egresado, apasionado por el desarrollo de software
+            y la creación de soluciones tecnológicas eficientes.
+        </p>
+    </section>
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="index.html">Inicio</a></li>
-								<li>
-									<a href="#">Proyectos</a>
-									<ul>
-										<li><a href="#proyectos">Sistema de Análisis de Red</a></li>
-										<li><a href="#proyectos">Proyecto Feria</a></li>
-										<li><a href="#proyectos">Inscripción Kinder</a></li>
-									</ul>
-								</li>
-								<li><a href="#sobre-mi">Sobre Mí</a></li>
-								<li><a href="#habilidades">Habilidades</a></li>
-								<li><a href="#contacto">Contacto</a></li>
-							</ul>
-						</nav>
+<!-- ===== PROYECTOS ===== -->
+<section id="proyectos" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Proyectos <span>Destacados</span></h2>
+            <p>Proyectos desarrollados durante mi formación académica y profesional</p>
+        </div>
+        <div class="projects-grid">
+            
+            <!-- Proyecto 1: Sistema de Monitoreo de Red -->
+            <div class="project-card">
+                <div class="project-image" style="background: linear-gradient(135deg, #0a0a1a, #1a3a5c);">
+                    <span class="icon">🌐</span>
+                    <span class="label">C# .NET</span>
+                </div>
+                <div class="content">
+                    <h3>
+                        <a href="https://github.com/Davidesk19120304/SistemaMonitorizacionRed" target="_blank" rel="noopener noreferrer">
+                            Sistema de Monitoreo de Red
+                        </a>
+                    </h3>
+                    <p>
+                        Aplicación de escritorio para análisis de tráfico de red en tiempo real, 
+                        detección de anomalías y generación de alertas. Ideal para PYMES y entornos 
+                        educativos con recursos limitados.
+                    </p>
+                    <div class="tech">
+                        <span>C#</span>
+                        <span>.NET</span>
+                        <span>SharpPcap</span>
+                        <span>PostgreSQL</span>
+                        <span>LiveCharts</span>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                        <span style="background: #e8491d20; color: #e8491d; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600;">
+                            🛡️ Detección de Anomalías
+                        </span>
+                        <span style="background: #e8491d20; color: #e8491d; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600;">
+                            📊 Visualización en Vivo
+                        </span>
+                        <span style="background: #e8491d20; color: #e8491d; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600;">
+                            🔐 2FA
+                        </span>
+                    </div>
+                    <a href="https://github.com/Davidesk19120304/SistemaMonitorizacionRed" target="_blank" rel="noopener noreferrer" class="btn-small">
+                        <i class="fab fa-github"></i> Ver en GitHub
+                    </a>
+                </div>
+            </div>
 
-				</div>
+            <!-- Proyecto 2: API de Gestión de Tareas -->
+            <div class="project-card">
+                <div class="project-image" style="background: linear-gradient(135deg, #2d2d5e, #4a2d7a);">
+                    <span class="icon">⚙️</span>
+                    <span class="label">.NET API</span>
+                </div>
+                <div class="content">
+                    <h3>
+                        <a href="https://github.com/Davidesk19120304/GestionTareasAPI" target="_blank" rel="noopener noreferrer">
+                            API de Gestión de Tareas
+                        </a>
+                    </h3>
+                    <p>
+                        API RESTful para la gestión de tareas, desarrollada con .NET. Permite crear, leer, actualizar y eliminar tareas, con una arquitectura escalable y buenas prácticas.
+                    </p>
+                    <div class="tech">
+                        <span>C#</span>
+                        <span>.NET</span>
+                        <span>REST API</span>
+                        <span>SQL Server</span>
+                        <span>Entity Framework</span>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                        <span style="background: #e8491d20; color: #e8491d; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600;">
+                            🚀 CRUD Completo
+                        </span>
+                        <span style="background: #e8491d20; color: #e8491d; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600;">
+                            📁 Arquitectura N-Capas
+                        </span>
+                    </div>
+                    <a href="https://github.com/Davidesk19120304/GestionTareasAPI" target="_blank" rel="noopener noreferrer" class="btn-small">
+                        <i class="fab fa-github"></i> Ver en GitHub
+                    </a>
+                </div>
+            </div>
 
-			<!-- Banner -->
-				<section id="banner">
-					<header>
-						<h2>Bienvenido a mi <strong>Portafolio</strong>.</h2>
-						<p>
-							Soy Ingeniero en Sistemas recién egresado, apasionado por el desarrollo de software
-							y la creación de soluciones tecnológicas eficientes.
-						</p>
-					</header>
-				</section>
+            <!-- Proyecto 3: Proyecto Feria -->
+            <div class="project-card">
+                <div class="project-image" style="background: linear-gradient(135deg, #e8491d, #c73d17);">
+                    <span class="icon">🎓</span>
+                    <span class="label">C#</span>
+                </div>
+                <div class="content">
+                    <h3>
+                        <a href="https://github.com/Davidesk19120304/Proyecto-feria" target="_blank" rel="noopener noreferrer">
+                            Proyecto Feria
+                        </a>
+                    </h3>
+                    <p>Aplicación educativa para niños con discapacidad auditiva, desarrollada como proyecto de investigación.</p>
+                    <div class="tech">
+                        <span>C#</span>
+                        <span>Python</span>
+                        <span>GNU/Linux</span>
+                    </div>
+                    <a href="https://github.com/Davidesk19120304/Proyecto-feria" target="_blank" rel="noopener noreferrer" class="btn-small">
+                        <i class="fab fa-github"></i> Ver en GitHub
+                    </a>
+                </div>
+            </div>
 
-			<!-- Carousel (Proyectos Destacados) -->
-				<section class="carousel" id="proyectos">
-					<div class="reel">
+            <!-- Proyecto 4: Inscripción Kinder -->
+            <div class="project-card">
+                <div class="project-image" style="background: linear-gradient(135deg, #16213e, #1a1a2e);">
+                    <span class="icon">🏫</span>
+                    <span class="label">C#</span>
+                </div>
+                <div class="content">
+                    <h3>
+                        <a href="https://github.com/Davidesk19120304/Inscripcion-kinder" target="_blank" rel="noopener noreferrer">
+                            Inscripción Kinder
+                        </a>
+                    </h3>
+                    <p>Sistema de escritorio para gestión de inscripciones en un kinder, con manejo de bases de datos y reportes.</p>
+                    <div class="tech">
+                        <span>C#</span>
+                        <span>XAMPP</span>
+                        <span>GNU/Linux</span>
+                    </div>
+                    <a href="https://github.com/Davidesk19120304/Inscripcion-kinder" target="_blank" rel="noopener noreferrer" class="btn-small">
+                        <i class="fab fa-github"></i> Ver en GitHub
+                    </a>
+                </div>
+            </div>
 
-						<article>
-							<div class="image featured">
-								<div class="image-placeholder" style="height:180px; background: linear-gradient(135deg, #1a1a2e, #2d2d5e); display:flex; align-items:center; justify-content:center; color:#fff; border-radius:10px; font-size:1.2rem;">
-									📡 Sistema de Red
-								</div>
-							</div>
-							<header>
-								<h3><a href="https://github.com/Davidesk19120304/Sistema-de-Analisis-y-Monitorizacion-del-trafico-de-red" target="_blank" rel="noopener noreferrer">Sistema de Análisis de Red</a></h3>
-							</header>
-							<p>Monitorización en tiempo real y detección de anomalías en el tráfico de red.</p>
-							<p><strong>Tecnologías:</strong> C#, XAMPP, Windows Forms</p>
-							<a href="https://github.com/Davidesk19120304/Sistema-de-Analisis-y-Monitorizacion-del-trafico-de-red" target="_blank" rel="noopener noreferrer" class="button small">Ver en GitHub</a>
-						</article>
+        </div>
+    </div>
+</section>
 
-						<article>
-							<div class="image featured">
-								<div class="image-placeholder" style="height:180px; background: linear-gradient(135deg, #e8491d, #c73d17); display:flex; align-items:center; justify-content:center; color:#fff; border-radius:10px; font-size:1.2rem;">
-									🎓 Proyecto Feria
-								</div>
-							</div>
-							<header>
-								<h3><a href="https://github.com/Davidesk19120304/Proyecto-feria" target="_blank" rel="noopener noreferrer">Proyecto Feria</a></h3>
-							</header>
-							<p>Aplicación educativa para niños con discapacidad auditiva.</p>
-							<p><strong>Tecnologías:</strong> C#, Python, GNU/Linux</p>
-							<a href="https://github.com/Davidesk19120304/Proyecto-feria" target="_blank" rel="noopener noreferrer" class="button small">Ver en GitHub</a>
-						</article>
+    <!-- ===== SOBRE MÍ ===== -->
+    <section id="sobre-mi" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sobre <span>Mí</span></h2>
+                <p>Conoce más sobre mi trayectoria y pasión por la tecnología</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="avatar">👨‍💻</div>
+                    <h3>Guillermo Adrianza</h3>
+                    <p>Ingeniero en Sistemas</p>
+                    <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+                        <span style="background: rgba(232,73,29,0.2); padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem; color: var(--accent);">Beca Académica</span>
+                        <span style="background: rgba(232,73,29,0.2); padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem; color: var(--accent);">Promedio 15.49/20</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>
+                        Soy un profesional apasionado por la tecnología y el desarrollo de software. Durante mi formación
+                        académica en el <strong class="highlight">Instituto Universitario Politécnico "Santiago Mariño"</strong>,
+                        destaqué por obtener una beca académica y mantener un promedio sobresaliente.
+                    </p>
+                    <p>
+                        Poseo conocimientos en lenguajes como <strong class="highlight">Python, C#, .NET</strong> y manejo
+                        de bases de datos <strong class="highlight">SQL</strong>. He desarrollado proyectos aplicando
+                        metodologías ágiles y tengo un gran interés en la inteligencia artificial y el desarrollo de
+                        soluciones innovadoras.
+                    </p>
+                    <p>
+                        Actualmente me encuentro en <strong class="highlight">búsqueda activa</strong> de mi primera
+                        oportunidad profesional, donde pueda aportar mis conocimientos técnicos, seguir aprendiendo y
+                        crecer dentro del área de desarrollo de software.
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="number">3+</div>
+                            <div class="label">Proyectos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="number">4</div>
+                            <div class="label">Tecnologías</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="number">100%</div>
+                            <div class="label">Dedicación</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-						<article>
-							<div class="image featured">
-								<div class="image-placeholder" style="height:180px; background: linear-gradient(135deg, #16213e, #1a1a2e); display:flex; align-items:center; justify-content:center; color:#fff; border-radius:10px; font-size:1.2rem;">
-									🏫 Inscripción Kinder
-								</div>
-							</div>
-							<header>
-								<h3><a href="https://github.com/Davidesk19120304/Inscripcion-kinder" target="_blank" rel="noopener noreferrer">Inscripción Kinder</a></h3>
-							</header>
-							<p>Sistema de escritorio para gestión de inscripciones en un kinder.</p>
-							<p><strong>Tecnologías:</strong> C#, XAMPP, GNU/Linux</p>
-							<a href="https://github.com/Davidesk19120304/Inscripcion-kinder" target="_blank" rel="noopener noreferrer" class="button small">Ver en GitHub</a>
-						</article>
+    <!-- ===== HABILIDADES ===== -->
+    <section id="habilidades" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Habilidades <span>Técnicas</span></h2>
+                <p>Tecnologías y herramientas que manejo</p>
+            </div>
+            <div class="skills-grid">
+                
+                <div class="skill-card">
+                    <div class="icon"><i class="fas fa-code"></i></div>
+                    <h3>Lenguajes de Programación</h3>
+                    <ul>
+                        <li>Python (Intermedio)</li>
+                        <li>C# (Intermedio)</li>
+                        <li>.NET (Intermedio)</li>
+                        <li>HTML/CSS (Intermedio)</li>
+                    </ul>
+                    <div class="skill-level"><div class="fill" style="width: 65%;"></div></div>
+                </div>
 
-						<article>
-							<div class="image featured">
-								<div class="image-placeholder" style="height:180px; background: linear-gradient(135deg, #2d2d5e, #1a1a2e); display:flex; align-items:center; justify-content:center; color:#fff; border-radius:10px; font-size:1.2rem;">
-									🚀 Próximo Proyecto
-								</div>
-							</div>
-							<header>
-								<h3><a href="#">Próximo Proyecto</a></h3>
-							</header>
-							<p>Actualmente trabajando en nuevos proyectos. ¡Pronto más!</p>
-							<p><strong>Tecnologías:</strong> Próximamente</p>
-						</article>
+                <div class="skill-card">
+                    <div class="icon"><i class="fas fa-database"></i></div>
+                    <h3>Bases de Datos</h3>
+                    <ul>
+                        <li>SQL (Intermedio)</li>
+                        <li>XAMPP (Intermedio)</li>
+                        <li>MySQL (Básico)</li>
+                    </ul>
+                    <div class="skill-level"><div class="fill" style="width: 60%;"></div></div>
+                </div>
 
-					</div>
-				</section>
+                <div class="skill-card">
+                    <div class="icon"><i class="fas fa-tools"></i></div>
+                    <h3>Herramientas</h3>
+                    <ul>
+                        <li>Visual Studio (Avanzado)</li>
+                        <li>GNU/Linux (Intermedio)</li>
+                        <li>Git/GitHub (Intermedio)</li>
+                    </ul>
+                    <div class="skill-level"><div class="fill" style="width: 70%;"></div></div>
+                </div>
 
-			<!-- Main (Sobre Mí) -->
-				<div class="wrapper style2" id="sobre-mi">
+                <div class="skill-card">
+                    <div class="icon"><i class="fas fa-brain"></i></div>
+                    <h3>Conocimientos Adicionales</h3>
+                    <ul>
+                        <li>Inteligencia Artificial (Curso)</li>
+                        <li>Desarrollo con IA (Curso)</li>
+                        <li>Metodologías Ágiles</li>
+                    </ul>
+                    <div class="skill-level"><div class="fill" style="width: 50%;"></div></div>
+                </div>
 
-					<article id="main" class="container special">
-						<div class="image featured">
-							<div class="image-placeholder" style="height:250px; background: linear-gradient(135deg, #2d2d5e, #1a1a2e); display:flex; align-items:center; justify-content:center; color:#fff; border-radius:10px; font-size:2rem;">
-								👨‍💻 Guillermo Adrianza
-							</div>
-						</div>
-						<header>
-							<h2><a href="#">Sobre Mí</a></h2>
-							<p>
-								Ingeniero en Sistemas egresado del Instituto Universitario Politécnico "Santiago Mariño"
-							</p>
-						</header>
-						<p>
-							Soy un profesional apasionado por la tecnología y el desarrollo de software. Durante mi formación
-							académica, destaqué por obtener una beca académica y mantener un promedio sobresaliente de 15.49/20.
-							Poseo conocimientos en lenguajes como <strong>Python, C#, .NET</strong> y manejo de bases de datos
-							<strong>SQL</strong>. He desarrollado proyectos aplicando metodologías ágiles y tengo un gran interés
-							en la inteligencia artificial y el desarrollo de soluciones innovadoras.
-						</p>
-						<p>
-							Actualmente me encuentro en búsqueda activa de mi primera oportunidad profesional, donde pueda
-							aportar mis conocimientos técnicos, seguir aprendiendo y crecer dentro del área de desarrollo de software.
-						</p>
-						<footer>
-							<a href="#contacto" class="button">Contáctame</a>
-						</footer>
-					</article>
+            </div>
+        </div>
+    </section>
 
-				</div>
-
-			<!-- Features (Habilidades) -->
-				<div class="wrapper style1" id="habilidades">
-
-					<section id="features" class="container special">
-						<header>
-							<h2>Habilidades Técnicas</h2>
-							<p>Estas son las tecnologías y herramientas que manejo</p>
-						</header>
-						<div class="row">
-							<article class="col-4 col-12-mobile special">
-								<header>
-									<h3>Lenguajes de Programación</h3>
-								</header>
-								<p>
-									<strong>Python</strong> (Intermedio)<br />
-									<strong>C#</strong> (Intermedio)<br />
-									<strong>HTML</strong> (Intermedio)<br />
-									<strong>.NET</strong> (Intermedio)
-								</p>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<header>
-									<h3>Bases de Datos y Herramientas</h3>
-								</header>
-								<p>
-									<strong>SQL</strong> (Intermedio)<br />
-									<strong>XAMPP</strong> (Intermedio)<br />
-									<strong>Visual Studio</strong> (Avanzado)<br />
-									<strong>GNU/Linux</strong> (Intermedio)
-								</p>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<header>
-									<h3>Otros Conocimientos</h3>
-								</header>
-								<p>
-									<strong>Inteligencia Artificial</strong> (Curso)<br />
-									<strong>Desarrollo con IA</strong> (Curso)<br />
-									<strong>Metodologías Ágiles</strong><br />
-									<strong>Microsoft Office</strong> (Intermedio)
-								</p>
-							</article>
-						</div>
-					</section>
-
-				</div>
-
-			<!-- Footer -->
-				<div id="footer" id="contacto">
-					<div class="container">
-						<div class="row">
-
-							<!-- Contacto -->
-								<section class="col-12">
-									<header>
-										<h2 class="icon solid fa-envelope circled"><span class="label">Contacto</span></h2>
-									</header>
-									<ul class="divided">
-										<li>
-											<article class="tweet">
-												<strong>📧 Email:</strong> <a href="mailto:guilleadrl6@gmail.com">guilleadrl6@gmail.com</a>
-											</article>
-										</li>
-										<li>
-											<article class="tweet">
-												<strong>📱 Teléfono:</strong> <a href="tel:04120643650">0412-0643650</a>
-											</article>
-										</li>
-										<li>
-											<article class="tweet">
-												<strong>📍 Ubicación:</strong> Cabimas, Zulia, Venezuela
-											</article>
-										</li>
-										<li>
-											<article class="tweet">
-												<strong>💼 Disponibilidad:</strong> Inmediata
-											</article>
-										</li>
-									</ul>
-								</section>
-
-						</div>
-						<hr />
-						<div class="row">
-							<div class="col-12">
-
-								<!-- Redes Sociales -->
-									<section class="contact">
-										<header>
-											<h3>Conéctate conmigo</h3>
-										</header>
-										<p>Sígueme en mis redes profesionales y revisa mi código en GitHub.</p>
-										<ul class="icons">
-											<li><a href="https://www.linkedin.com/in/guillermo-adrianza-308222426" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											<li><a href="https://github.com/Davidesk19120304" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-											<li><a href="mailto:guilleadrl6@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-										</ul>
-									</section>
-
-								<!-- Copyright -->
-									<div class="copyright">
-										<ul class="menu">
-											<li>&copy; 2026 Guillermo Adrianza. Todos los derechos reservados.</li>
-											<li>Diseño: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
-										</ul>
-									</div>
-
-							</div>
-
-						</div>
-					</div>
-				</div>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+    <!-- ===== CONTACTO ===== -->
+    <section id="contacto" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contáctame</h2>
+                <p>¿Tienes una oportunidad o quieres colaborar? ¡Escríbeme!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="icon"><i class="fas fa-envelope"></i></div>
+                    <h4>Email</h4>
+                    <p><a href="mailto:guilleadrl6@gmail.com">guilleadrl6@gmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><i class="fas fa-phone"></i></div>
+                    <h4>Teléfono</h4>
+                    <p><a href="tel:04120643650">0412-0643650</a></p>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h4>Ubicación</h4>
+                    <p>Cabimas, Zulia, Venezuela</p>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><i class="fas fa-clock"></i></div>
+                    <h4>Disponibilidad</h4>
+                    <p>Inmediata</p>
+                </div>
