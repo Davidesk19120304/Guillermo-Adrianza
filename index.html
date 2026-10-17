@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guillermo Adrianza | Ingeniero en Sistemas</title>
+    <meta name="description" content="Portafolio de Guillermo Adrianza, Ingeniero en Sistemas. Desarrollo de software, automatización, análisis de datos e IA aplicada." />
+    <meta name="keywords" content="Ingeniero en Sistemas, Junior Software Developer, Solutions Engineer, Analista de Datos, Python, C#, .NET, SQL, Power BI" />
+    <meta name="author" content="Guillermo Adrianza" />
+    <meta property="og:title" content="Guillermo Adrianza | Ingeniero en Sistemas" />
+    <meta property="og:description" content="Portafolio profesional: software, datos y automatización." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://davidesk19120304.github.io/Guillermo-Adrianza/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy: #0a1628;
+            --navy-2: #0d2137;
+            --steel: #1e3a5f;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --sky: #60a5fa;
+            --gray-50: #f1f4f8;
+            --gray-100: #e7ecf3;
+            --gray-500: #64748b;
+            --gray-700: #334155;
+            --line: #dbe3ee;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(10, 22, 40, 0.10);
+            --radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--gray-50); color: var(--navy); line-height: 1.6; overflow-x: hidden;
+        }
+        a { color: inherit; text-decoration: none; }
+        :focus-visible { outline: 2px solid var(--sky); outline-offset: 3px; border-radius: 4px; }
+
+        /* ===== ÍCONOS SVG ===== */
+        .ic {
+            width: 1em; height: 1em; flex-shrink: 0;
+            stroke: currentColor; fill: none; stroke-width: 2;
+            stroke-linecap: round; stroke-linejoin: round; vertical-align: -0.15em;
+        }
+        .ic .dot { fill: currentColor; stroke: none; }
+        .bi { width: 1em; height: 1em; flex-shrink: 0; fill: currentColor; vertical-align: -0.15em; }
+        .brand {
+            width: 1.6em; height: 1.6em; border-radius: 50%; flex-shrink: 0;
+            display: inline-flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 0.72em; letter-spacing: -0.3px; color: #fff;
+        }
+        .brand-li { background: #0a66c2; }
+        .brand-gh { background: #24292f; }
+        .brand-wa { background: #25d366; }
+
+        /* ===== NAVEGACIÓN ===== */
+        #nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            height: 70px; padding: 0 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(10, 22, 40, 0.92); backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--accent);
+        }
+        #nav .logo { color: var(--white); font-size: 1.3rem; font-weight: 800; letter-spacing: -0.5px; }
+        #nav .logo span { color: var(--sky); }
+        #nav ul { list-style: none; display: flex; gap: 2rem; align-items: center; }
+        #nav ul a { color: #cbd5e1; font-weight: 500; font-size: 0.95rem; position: relative; transition: var(--transition); }
+        #nav ul a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 2px; background: var(--sky); transition: var(--transition);
+        }
+        #nav ul a:hover, #nav ul a.active { color: var(--white); }
+        #nav ul a:hover::after, #nav ul a.active::after { width: 100%; }
+        .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 5px; }
+        .nav-toggle span { display: block; width: 25px; height: 3px; background: var(--white); border-radius: 3px; }
+
+        /* ===== PORTADA ===== */
+        #header {
+            min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;
+            padding: 90px 2rem 4rem; position: relative; overflow: hidden;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 50%, var(--steel) 100%);
+        }
+        #header::before, #header::after { content: ''; position: absolute; border-radius: 50%; pointer-events: none; }
+        #header::before { top: -40%; right: -15%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(96,165,250,0.14) 0%, transparent 70%); }
+        #header::after { bottom: -30%; left: -10%; width: 420px; height: 420px; background: radial-gradient(circle, rgba(37,99,235,0.12) 0%, transparent 70%); }
+        .hero-content { position: relative; z-index: 1; max-width: 800px; }
+
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: rgba(96,165,250,0.12); color: var(--sky);
+            border: 1px solid rgba(96,165,250,0.3); padding: 0.5rem 1.4rem; border-radius: 50px;
+            font-size: 0.85rem; font-weight: 600; margin-bottom: 1.5rem;
+        }
+        .hero-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 8px #22c55e; }
+
+        #header h1 { font-size: 4.5rem; font-weight: 800; color: var(--white); letter-spacing: -2px; line-height: 1.1; margin-bottom: 0.75rem; }
+        #header h1 span { color: var(--sky); }
+        #header .subtitle { font-size: 1.4rem; color: #cbd5e1; font-weight: 300; margin-bottom: 0.75rem; }
+        #header .subtitle strong { color: var(--white); font-weight: 600; }
+        #header .hero-description { color: #94a3b8; font-size: 1.05rem; margin-bottom: 2.2rem; }
+
+        .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.9rem 2.1rem; border-radius: 50px;
+            font-weight: 600; font-size: 1rem; transition: var(--transition); border: 2px solid transparent; font-family: inherit;
+        }
+        .btn .ic { font-size: 1.1em; }
+        .btn-primary { background: var(--accent); color: var(--white); }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(37,99,235,0.4); }
+        .btn-secondary { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.3); }
+        .btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: var(--sky); transform: translateY(-3px); }
+
+        .stats-hero { display: flex; justify-content: center; gap: 3rem; margin-top: 3rem; flex-wrap: wrap; }
+        .stats-hero div strong { display: block; font-size: 1.8rem; color: var(--white); font-weight: 800; }
+        .stats-hero div span { font-size: 0.85rem; color: #94a3b8; }
+
+        .scroll-indicator { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); color: #94a3b8; font-size: 1.6rem; opacity: 0.7; animation: bounce 2s infinite; }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-14px); }
+            60% { transform: translateX(-50%) translateY(-7px); }
+        }
+
+        /* ===== SECCIONES ===== */
+        .section { padding: 6rem 2rem; }
+        .section.alt { background: var(--gray-100); }
+        .section.dark { background: var(--navy); color: var(--white); }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 4rem; }
+        .section-header h2 { font-size: 2.6rem; font-weight: 800; margin-bottom: 0.8rem; color: var(--navy); }
+        .section-header h2 span { color: var(--accent); }
+        .section-header p { color: var(--gray-500); font-size: 1.1rem; }
+        .section.dark .section-header h2 { color: var(--white); }
+        .section.dark .section-header h2 span { color: var(--sky); }
+        .section.dark .section-header p { color: #94a3b8; }
+
+        /* ===== PROYECTOS ===== */
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .project-card {
+            background: var(--white); border-radius: var(--radius); overflow: hidden;
+            box-shadow: var(--shadow); transition: var(--transition); display: flex; flex-direction: column;
+        }
+        .project-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(37,99,235,0.18); }
+        .project-image { height: 170px; display: flex; align-items: center; justify-content: center; position: relative; color: var(--white); }
+        .project-image .ic { font-size: 4.2rem; opacity: 0.9; }
+        .project-image .label {
+            position: absolute; bottom: 1rem; right: 1rem; background: rgba(0,0,0,0.35);
+            padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;
+        }
+        .project-card .content { padding: 1.8rem; display: flex; flex-direction: column; flex: 1; }
+        .project-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .project-card h3 a { color: var(--navy); transition: var(--transition); }
+        .project-card h3 a:hover { color: var(--accent); }
+        .project-card p { color: var(--gray-700); font-size: 0.95rem; margin-bottom: 0.5rem; }
+        .tech { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
+        .tech span {
+            background: var(--gray-50); border: 1px solid var(--line); padding: 0.2rem 0.8rem;
+            border-radius: 20px; font-size: 0.75rem; font-weight: 600; color: var(--steel);
+        }
+        .project-image.shot { height: auto; aspect-ratio: 712 / 430; padding: 0; background: #0a1628; }
+        .project-image.shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .gallery { margin-top: 4rem; }
+        .gallery-title { font-size: 1.2rem; font-weight: 700; color: var(--navy); margin-bottom: 1.4rem; text-align: center; }
+        .shots-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.6rem; }
+        .shot-fig { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+        .shot-fig img { width: 100%; height: auto; display: block; }
+        .shot-fig figcaption { padding: 0.9rem 1.1rem; font-size: 0.88rem; color: var(--gray-700); }
+        .btn-small {
+            margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 0.5rem;
+            background: var(--navy); color: var(--white); padding: 0.55rem 1.4rem; border-radius: 50px;
+            font-size: 0.85rem; font-weight: 600; transition: var(--transition);
+        }
+        .btn-small:hover { background: var(--accent); transform: translateX(5px); }
+
+        /* ===== SOBRE MÍ ===== */
+        .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: center; }
+        .about-image {
+            background: linear-gradient(135deg, var(--navy-2), var(--navy)); border-radius: var(--radius);
+            padding: 3rem 2rem; text-align: center; border: 1px solid rgba(96,165,250,0.2); color: var(--white);
+        }
+        .about-image .avatar {
+            width: 110px; height: 110px; margin: 0 auto 1.2rem; border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--steel));
+            display: flex; align-items: center; justify-content: center; color: var(--white);
+        }
+        .about-image .avatar .ic { font-size: 3rem; }
+        .about-image h3 { font-size: 1.4rem; font-weight: 700; }
+        .about-image > p { color: #94a3b8; font-size: 0.95rem; }
+        .chips { margin-top: 1.5rem; display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; }
+        .chips span {
+            background: rgba(96,165,250,0.15); color: var(--sky); padding: 0.35rem 1rem;
+            border-radius: 20px; font-size: 0.8rem; font-weight: 500; display: inline-flex; align-items: center; gap: 0.4rem;
+        }
+        .about-text p { color: var(--gray-700); margin-bottom: 1.2rem; font-size: 1.02rem; line-height: 1.8; }
+        .about-text strong { color: var(--navy); font-weight: 600; }
+        .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2rem; }
+        .stat-item { text-align: center; background: var(--white); border: 1px solid var(--line); padding: 1.3rem 1rem; border-radius: var(--radius); }
+        .stat-item .number { font-size: 1.8rem; font-weight: 800; color: var(--accent); }
+        .stat-item .label { font-size: 0.8rem; color: var(--gray-500); }
+
+        /* ===== HABILIDADES ===== */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1.8rem; }
+        .skill-card { background: var(--white); padding: 2rem; border-radius: var(--radius); border: 1px solid var(--line); transition: var(--transition); }
+        .skill-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow); }
+        .skill-card .icon {
+            width: 52px; height: 52px; border-radius: 12px; margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--accent), var(--steel)); color: var(--white);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .skill-card .icon .ic { font-size: 1.5rem; }
+        .skill-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--navy); }
+        .skill-card ul { list-style: none; }
+        .skill-card li { padding: 0.35rem 0; color: var(--gray-700); font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem; }
+        .skill-card li::before { content: '▸'; color: var(--accent); font-weight: 700; }
+        .skill-card li em { margin-left: auto; font-style: normal; font-size: 0.75rem; color: var(--gray-500); }
+
+        /* ===== CERTIFICACIONES ===== */
+        .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; }
+        .cert {
+            display: flex; gap: 1rem; align-items: flex-start; background: var(--white);
+            border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: var(--radius);
+            padding: 1.2rem 1.4rem; transition: var(--transition);
+        }
+        .cert:hover { transform: translateY(-3px); border-color: var(--accent); }
+        .cert .ic { color: var(--accent); font-size: 1.4rem; margin-top: 2px; }
+        .cert h4 { font-size: 0.98rem; font-weight: 600; color: var(--navy); margin-bottom: 0.2rem; }
+        .cert p { font-size: 0.84rem; color: var(--gray-500); }
+
+        /* ===== CONTACTO ===== */
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.8rem; max-width: 900px; margin: 0 auto; }
+        .contact-item {
+            background: rgba(96,165,250,0.06); padding: 2rem 1.5rem; border-radius: var(--radius);
+            text-align: center; border: 1px solid rgba(96,165,250,0.15); transition: var(--transition);
+        }
+        .contact-item:hover { background: rgba(96,165,250,0.12); transform: translateY(-4px); border-color: var(--accent); }
+        .contact-item .icon { font-size: 2.2rem; color: var(--sky); margin-bottom: 0.9rem; display: flex; justify-content: center; }
+        .contact-item h4 { font-weight: 600; margin-bottom: 0.4rem; color: var(--white); }
+        .contact-item p, .contact-item a { color: #cbd5e1; font-size: 0.95rem; transition: var(--transition); }
+        .contact-item a:hover { color: var(--sky); }
+        .copy-btn { background: none; border: none; color: var(--sky); cursor: pointer; font-size: 1rem; margin-left: 0.5rem; transition: var(--transition); vertical-align: middle; }
+        .copy-btn:hover { color: var(--white); }
+        .contact-item.span-2 { grid-column: 1 / -1; max-width: 560px; margin: 0 auto; width: 100%; }
+
+        /* ===== FOOTER ===== */
+        #footer { background: var(--navy-2); padding: 3rem 2rem 2rem; text-align: center; border-top: 1px solid rgba(96,165,250,0.1); }
+        .social { display: flex; justify-content: center; gap: 1.2rem; margin-bottom: 1.8rem; }
+        .social a {
+            width: 50px; height: 50px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+            background: linear-gradient(135deg, var(--accent), var(--steel)); color: var(--white); font-size: 1.25rem;
+            transition: var(--transition); box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+        }
+        .social a:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(37,99,235,0.45); }
+        .social a .bi { font-size: 1.25rem; }
+        .copyright { color: #94a3b8; font-size: 0.9rem; }
+        .copyright .sub { font-size: 0.8rem; color: #64748b; margin-top: 0.4rem; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 968px) {
+            #header h1 { font-size: 3.4rem; }
+            .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+        }
+        @media (max-width: 768px) {
+            #nav { padding: 0 1.2rem; }
+            .nav-toggle { display: flex; }
+            #nav ul {
+                display: none; flex-direction: column; gap: 0; position: absolute; top: 70px; left: 0; right: 0;
+                background: var(--navy); padding: 0.5rem 0; border-bottom: 2px solid var(--accent);
+            }
+            #nav ul.open { display: flex; }
+            #nav ul li { width: 100%; }
+            #nav ul a { display: block; padding: 0.9rem 1.5rem; }
+            #nav ul a::after { display: none; }
+            #header h1 { font-size: 2.6rem; }
+            #header .subtitle { font-size: 1.1rem; }
+            .section { padding: 4.5rem 1.2rem; }
+            .section-header h2 { font-size: 2rem; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .stats { grid-template-columns: 1fr; }
+            .stats-hero { gap: 1.8rem; }
+            .hero-buttons { flex-direction: column; align-items: stretch; }
+            .btn { justify-content: center; }
+        }
+        @media (max-width: 480px) {
+            #header h1 { font-size: 2.2rem; }
+            #header { min-height: 92vh; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sprite de íconos SVG (no depende de ningún CDN) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="i-network" viewBox="0 0 24 24"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.2 7.2l3.6 8.6M16.8 7.2l-3.6 8.6M7.5 6h9"/></symbol>
+        <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/><circle class="dot" cx="7" cy="6.5" r="1"/><circle class="dot" cx="7" cy="17.5" r="1"/></symbol>
+        <symbol id="i-grad" viewBox="0 0 24 24"><polygon points="12 3 22 8 12 13 2 8"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5"/></symbol>
+        <symbol id="i-school" viewBox="0 0 24 24"><path d="M3 10l9-6 9 6v10H3z"/><path d="M9 20v-6h6v6"/></symbol>
+        <symbol id="i-laptop" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="11" rx="2"/><path d="M2 19h20"/></symbol>
+        <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14l-1.5 7 5-2.5 5 2.5-1.5-7"/></symbol>
+        <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V11M10 20V5M16 20v-7M22 20H2"/></symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></symbol>
+        <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+        <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+        <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2"/></symbol>
+        <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle class="dot" cx="12" cy="12" r="1.5"/></symbol>
+        <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+        <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+        <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+        <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18a4 4 0 0 1-.5-8A6 6 0 0 1 18 11a3.5 3.5 0 0 1 0 7H7z"/></symbol>
+        <symbol id="i-cert" viewBox="0 0 24 24"><circle cx="12" cy="10" r="6"/><path d="M9 15l-2 6 5-2 5 2-2-6"/></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></symbol>
+        <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></symbol>
+        <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></symbol>
+        <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="3"/></symbol>
+        <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0 5 5l-7.4 7.4a2.1 2.1 0 0 1-3-3l7.4-7.4"/></symbol>
+        <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+        <symbol id="i-gmail" viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></symbol>
+        <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+        <symbol id="i-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    </svg>
+
+    <!-- ===== NAVEGACIÓN ===== -->
+    <nav id="nav">
+        <a href="#header" class="logo" aria-label="Inicio">G<span>A</span></a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul id="navMenu">
+            <li><a href="#header" class="active">Inicio</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#certificaciones">Certificaciones</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== PORTADA ===== -->
+    <header id="header">
+        <div class="hero-content">
+            <div class="hero-badge"><span class="dot"></span> Disponible para oportunidades</div>
+            <h1>Guillermo <span>Adrianza</span></h1>
+            <p class="subtitle"><strong>Ingeniero en Sistemas</strong> · Junior Software Developer y Solutions Engineer</p>
+            <p class="hero-description">Desarrollo de software, automatización, análisis de datos e IA aplicada a problemas reales.</p>
+            <div class="hero-buttons">
+                <a href="#proyectos" class="btn btn-primary"><svg class="ic"><use href="#i-arrow"/></svg> Ver proyectos</a>
+                <a href="#contacto" class="btn btn-secondary"><svg class="ic"><use href="#i-mail"/></svg> Contáctame</a>
+                <a href="https://github.com/Davidesk19120304" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><svg class="bi"><use href="#i-github"/></svg> GitHub</a>
+            </div>
+            <div class="stats-hero">
+                <div><strong>4</strong><span>Proyectos</span></div>
+                <div><strong>15.96</strong><span>Promedio /20</span></div>
+                <div><strong>7</strong><span>Certificaciones</span></div>
+            </div>
+        </div>
+        <a href="#proyectos" class="scroll-indicator" aria-label="Ir a proyectos"><svg class="ic"><use href="#i-down"/></svg></a>
+    </header>
+
+    <!-- ===== PROYECTOS ===== -->
+    <section id="proyectos" class="section alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Proyectos <span>destacados</span></h2>
+                <p>Desarrollados durante mi formación académica y práctica personal.</p>
+            </div>
+            <div class="projects-grid">
+
+                <article class="project-card">
+                    <div class="project-image shot">
+                        <img src="img/monitoreo.png" alt="Pantalla principal del sistema de monitoreo de red con tráfico en tiempo real" loading="lazy" />
+                        <span class="label">C# · .NET</span>
+                    </div>
+                    <div class="content">
+                        <h3><a href="https://github.com/Davidesk19120304/SistemaMonitorizacionRed" target="_blank" rel="noopener noreferrer">Sistema de Monitoreo de Red</a></h3>
+                        <p>Aplicación de escritorio para analizar tráfico de red en tiempo real, detectar anomalías y generar alertas.</p>
+                        <div class="tech"><span>C#</span><span>.NET</span><span>SharpPcap</span><span>PostgreSQL</span><span>LiveCharts</span></div>
+                        <a href="https://github.com/Davidesk19120304/SistemaMonitorizacionRed" target="_blank" rel="noopener noreferrer" class="btn-small"><svg class="bi"><use href="#i-github"/></svg> Ver en GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #1e3a5f, #2563eb);">
+                        <svg class="ic"><use href="#i-server"/></svg>
+                        <span class="label">.NET API</span>
+                    </div>
+                    <div class="content">
+                        <h3><a href="https://github.com/Davidesk19120304/GestionTareasAPI" target="_blank" rel="noopener noreferrer">API de Gestión de Tareas</a></h3>
+                        <p>API RESTful con CRUD completo y arquitectura en capas, pensada para escalar.</p>
+                        <div class="tech"><span>C#</span><span>.NET</span><span>REST API</span><span>SQL Server</span><span>Entity Framework</span></div>
+                        <a href="https://github.com/Davidesk19120304/GestionTareasAPI" target="_blank" rel="noopener noreferrer" class="btn-small"><svg class="bi"><use href="#i-github"/></svg> Ver en GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #1e40af, #3b82f6);">
+                        <svg class="ic"><use href="#i-grad"/></svg>
+                        <span class="label">C# · Python</span>
+                    </div>
+                    <div class="content">
+                        <h3><a href="https://github.com/Davidesk19120304/Proyecto-feria" target="_blank" rel="noopener noreferrer">Proyecto Feria</a></h3>
+                        <p>Aplicación educativa para niños con discapacidad auditiva, desarrollada como proyecto de investigación.</p>
+                        <div class="tech"><span>C#</span><span>Python</span><span>GNU/Linux</span></div>
+                        <a href="https://github.com/Davidesk19120304/Proyecto-feria" target="_blank" rel="noopener noreferrer" class="btn-small"><svg class="bi"><use href="#i-github"/></svg> Ver en GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #0d2137, #1e3a5f);">
+                        <svg class="ic"><use href="#i-school"/></svg>
+                        <span class="label">C# · XAMPP</span>
+                    </div>
+                    <div class="content">
+                        <h3><a href="https://github.com/Davidesk19120304/Inscripcion-kinder" target="_blank" rel="noopener noreferrer">Inscripción Kinder</a></h3>
+                        <p>Sistema de escritorio para gestionar inscripciones en un kínder, con generación de reportes.</p>
+                        <div class="tech"><span>C#</span><span>XAMPP</span><span>GNU/Linux</span></div>
+                        <a href="https://github.com/Davidesk19120304/Inscripcion-kinder" target="_blank" rel="noopener noreferrer" class="btn-small"><svg class="bi"><use href="#i-github"/></svg> Ver en GitHub</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="gallery">
+                <h3 class="gallery-title">Sistema de Monitoreo de Red · capturas</h3>
+                <div class="shots-grid">
+                    <figure class="shot-fig">
+                        <img src="img/monitoreo.png" alt="Monitorización de tráfico en tiempo real con indicadores de velocidad, latencia y banda" loading="lazy" />
+                        <figcaption>Monitorización en tiempo real: tráfico, velocidad, latencia y banda.</figcaption>
+                    </figure>
+                    <figure class="shot-fig">
+                        <img src="img/sensibilidad.png" alt="Ventana de configuración de alertas con sensibilidad sigma" loading="lazy" />
+                        <figcaption>Alertas configurables: sensibilidad ajustable en sigma.</figcaption>
+                    </figure>
+                    <figure class="shot-fig">
+                        <img src="img/login.png" alt="Pantalla de inicio de sesión del sistema" loading="lazy" />
+                        <figcaption>Acceso con inicio de sesión de usuario.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOBRE MÍ ===== -->
+    <section id="sobre-mi" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sobre <span>mí</span></h2>
+                <p>Mi formación, mis intereses y lo que busco en mi primera oportunidad.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="avatar"><svg class="ic"><use href="#i-laptop"/></svg></div>
+                    <h3>Guillermo Adrianza</h3>
+                    <p>Ingeniero en Sistemas</p>
+                    <div class="chips">
+                        <span><svg class="ic"><use href="#i-award"/></svg> Beca académica</span>
+                        <span><svg class="ic"><use href="#i-chart"/></svg> Promedio 15.96/20</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>
+                        Soy <strong>Ingeniero en Sistemas</strong> recién egresado del Instituto Universitario Politécnico
+                        "Santiago Mariño", con formación en desarrollo de software, tecnologías web, redes, bases de datos,
+                        automatización e inteligencia artificial.
+                    </p>
+                    <p>
+                        Obtuve una <strong>beca académica</strong> de la Fundación Dr. Jesús Enrique Lossada y mantuve un
+                        promedio de <strong>15.96/20</strong>. Tengo experiencia práctica en análisis de requerimientos,
+                        procesamiento de datos, pruebas, validación y documentación técnica. Reduje en más de un 98% el
+                        tiempo de revisión manual con scripts de extracción, limpieza y generación automática de reportes.
+                    </p>
+                    <p>
+                        Me interesan el <strong>desarrollo de software</strong>, la <strong>automatización</strong>, el
+                        <strong>análisis de datos</strong> y la <strong>IA aplicada</strong>. Busco mi primera oportunidad
+                        como Junior Software Developer, Solutions Engineer o Analista de Datos, en modalidad remota o presencial.
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item"><div class="number">4</div><div class="label">Proyectos</div></div>
+                        <div class="stat-item"><div class="number">7</div><div class="label">Certificaciones</div></div>
+                        <div class="stat-item"><div class="number">15.96</div><div class="label">Promedio /20</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HABILIDADES ===== -->
+    <section id="habilidades" class="section alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Habilidades <span>técnicas</span></h2>
+                <p>Tecnologías y herramientas que uso con frecuencia.</p>
+            </div>
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <div class="icon"><svg class="ic"><use href="#i-code"/></svg></div>
+                    <h3>Lenguajes</h3>
+                    <ul>
+                        <li>Python <em>Intermedio</em></li>
+                        <li>C# y .NET <em>Intermedio</em></li>
+                        <li>SQL <em>Intermedio</em></li>
+                        <li>JavaScript <em>Básico–Intermedio</em></li>
+                        <li>HTML5 y CSS3 <em>Intermedio</em></li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="icon"><svg class="ic"><use href="#i-chart"/></svg></div>
+                    <h3>Datos e IA</h3>
+                    <ul>
+                        <li>pandas, NumPy, Matplotlib</li>
+                        <li>scikit-learn (Isolation Forest)</li>
+                        <li>Power BI</li>
+                        <li>Detección de anomalías</li>
+                        <li>IA aplicada y desarrollo asistido por IA</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="icon"><svg class="ic"><use href="#i-db"/></svg></div>
+                    <h3>Bases de datos</h3>
+                    <ul>
+                        <li>PostgreSQL</li>
+                        <li>MySQL y MariaDB</li>
+                        <li>SQLite</li>
+                        <li>Diseño de bases de datos relacionales</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="icon"><svg class="ic"><use href="#i-network"/></svg></div>
+                    <h3>Redes e infraestructura</h3>
+                    <ul>
+                        <li>Fundamentos de redes</li>
+                        <li>Monitoreo de tráfico</li>
+                        <li>Fundamentos de seguridad informática</li>
+                        <li>VirtualBox y VMware</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="icon"><svg class="ic"><use href="#i-cpu"/></svg></div>
+                    <h3>Automatización</h3>
+                    <ul>
+                        <li>Scripts de Python</li>
+                        <li>Extracción y procesamiento de CSV/Excel</li>
+                        <li>Generación automatizada de reportes</li>
+                        <li>Automatización de tareas</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="icon"><svg class="ic"><use href="#i-wrench"/></svg></div>
+                    <h3>Herramientas y prácticas</h3>
+                    <ul>
+                        <li>Git y GitHub</li>
+                        <li>Jupyter y Anaconda</li>
+                        <li>Visual Studio</li>
+                        <li>Microsoft Excel</li>
+                        <li>Metodologías ágiles y documentación técnica</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CERTIFICACIONES ===== -->
+    <section id="certificaciones" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Certificaciones <span>y cursos</span></h2>
+                <p>Formación complementaria en datos, IA, cloud y programación.</p>
+            </div>
+            <div class="certs-grid">
+                <div class="cert"><svg class="ic"><use href="#i-award"/></svg><div><h4>Experto en Análisis y Visualización de Datos + IA</h4><p>Udemy · 47 h · jul 2026</p></div></div>
+                <div class="cert"><svg class="ic"><use href="#i-cloud"/></svg><div><h4>Fundamentos de AWS: Cloud, Serverless y Operación</h4><p>Commit Academy · sep 2026</p></div></div>
+                <div class="cert"><svg class="ic"><use href="#i-spark"/></svg><div><h4>Curso de Iniciación al Desarrollo con IA</h4><p>BIG School · 4 h · oct 2026</p></div></div>
+                <div class="cert"><svg class="ic"><use href="#i-cpu"/></svg><div><h4>Curso de Iniciación a la IA</h4><p>BIG School · 6 h · sep 2026</p></div></div>
+                <div class="cert"><svg class="ic"><use href="#i-target"/></svg><div><h4>DeepSeek R1: 25 Proyectos de IA para Principiantes</h4><p>Udemy · 7,5 h · ago 2026</p></div></div>
+                <div class="cert"><svg class="ic"><use href="#i-laptop"/></svg><div><h4>Crea tus Propios Juegos con HTML, Canvas y JavaScript</h4><p>Udemy · 9,5 h · ago 2026</p></div></div>
+                <div class="cert"><svg class="ic"><use href="#i-cert"/></svg><div><h4>Fundamentos de C#</h4><p>Microsoft / freeCodeCamp · feb 2026</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section id="contacto" class="section dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contáctame</h2>
+                <p>¿Tienes una oportunidad o quieres colaborar? Escríbeme.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="icon"><svg class="ic"><use href="#i-mail"/></svg></div>
+                    <h4>Email</h4>
+                    <p>
+                        <a href="mailto:guilleadr16@gmail.com">guilleadr16@gmail.com</a>
+                        <button class="copy-btn" id="copyBtn" aria-label="Copiar correo" title="Copiar correo"><svg class="ic"><use href="#i-copy"/></svg></button>
+                    </p>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><svg class="ic"><use href="#i-phone"/></svg></div>
+                    <h4>Teléfono / WhatsApp</h4>
+                    <p><a href="https://wa.me/584120643650" target="_blank" rel="noopener noreferrer">+58 412-0643650</a></p>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><svg class="ic"><use href="#i-pin"/></svg></div>
+                    <h4>Ubicación</h4>
+                    <p>Cabimas, Zulia, Venezuela</p>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><svg class="ic"><use href="#i-briefcase"/></svg></div>
+                    <h4>Modalidad</h4>
+                    <p>Remoto o presencial</p>
+                </div>
+                <div class="contact-item span-2">
+                    <div class="icon"><svg class="ic"><use href="#i-target"/></svg></div>
+                    <h4>Interés profesional</h4>
+                    <p>Solutions Engineering · Desarrollo de software · Infraestructura · Automatización · Cloud · Ciberseguridad · IA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="footer">
+        <div class="social">
+            <a href="https://www.linkedin.com/in/guillermo-adrianza-308222426" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><span class="brand brand-li">in</span></a>
+            <a href="https://github.com/Davidesk19120304" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg class="bi"><use href="#i-github"/></svg></a>
+            <a href="mailto:guilleadr16@gmail.com" aria-label="Enviar correo"><svg class="bi"><use href="#i-gmail"/></svg></a>
+            <a href="https://wa.me/584120643650" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg class="bi"><use href="#i-whatsapp"/></svg></a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Guillermo Adrianza. Todos los derechos reservados.</p>
+            <p class="sub">Ingeniero en Sistemas</p>
+        </div>
+    </footer>
+
+    <script>
+        // Copiar correo con retroalimentación visual, sin alertas
+        const EMAIL = "guilleadr16@gmail.com";
+        const copyBtn = document.getElementById("copyBtn");
+        const iconCopy = copyBtn.innerHTML;
+        const iconCheck = '<svg class="ic"><use href="#i-check"/></svg>';
+        copyBtn.addEventListener("click", async () => {
+            try {
+                await navigator.clipboard.writeText(EMAIL);
+            } catch (e) {
+                const ta = document.createElement("textarea");
+                ta.value = EMAIL;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand("copy");
+                document.body.removeChild(ta);
+            }
+            copyBtn.innerHTML = iconCheck;
+            setTimeout(() => { copyBtn.innerHTML = iconCopy; }, 2000);
+        });
+
+        // Menú móvil
+        const toggle = document.getElementById("navToggle");
+        const menu = document.getElementById("navMenu");
+        toggle.addEventListener("click", () => {
+            const open = menu.classList.toggle("open");
+            toggle.setAttribute("aria-expanded", open);
+        });
+        menu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                menu.classList.remove("open");
+                toggle.setAttribute("aria-expanded", "false");
+            });
+        });
+
+        // Enlace activo según la sección visible
+        const sections = document.querySelectorAll("header[id], section[id]");
+        const navLinks = document.querySelectorAll("#navMenu a");
+        window.addEventListener("scroll", () => {
+            let current = "header";
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+            });
+            navLinks.forEach(link => {
+                link.classList.toggle("active", link.getAttribute("href") === "#" + current);
+            });
+        }, { passive: true });
+    </script>
+</body>
+</html>
